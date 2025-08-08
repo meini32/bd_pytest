@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"   # 你项目使用的 Python 版本
+          python-version: "3.13.5"   # 你项目使用的 Python 版本
 
       # 3️⃣ 安装依赖
       - name: Install dependencies
@@ -28,6 +28,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest pytest-html   # 安装 pytest 和报告插件
+          pip install requests
 
       # 4️⃣ 运行测试（带 HTML 报告）
       - name: Run pytest tests
