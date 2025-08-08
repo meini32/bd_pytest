@@ -14,7 +14,7 @@ jobs:
     steps:
       # 1️⃣ 拉取 GitHub 仓库代码
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 2️⃣ 设置 Python 版本
       - name: Set up Python
@@ -37,7 +37,7 @@ jobs:
 
       # 5️⃣ 上传 HTML 报告为工作流工件（可在 GitHub Actions 下载）
       - name: Upload test report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pytest-report
           path: report.html
